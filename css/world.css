@@ -6,13 +6,19 @@
 #map {
 	position: relative;
 	font-family: "Courier New", Courier, monospace;
-	border: 1px solid black;
+	border: 2px solid var(--primary-color);
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border-radius: var(--border-radius-lg);
 	overflow: hidden;
 	display: inline-block;
 	line-height: 10px;
 	letter-spacing: 1px;
-	color: #999;
+	color: #64748b;
 	cursor: default;
+	padding: 8px;
+	box-shadow: var(--shadow-md);
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -23,52 +29,84 @@
 
 #map .landmark {
 	position: relative;
-	font-weight: bold;
-	color: black;
-	line-height: 0px; /* Hack to prevent the boldness from increasing the row's line-height. I hope it works in all browsers... */
+	font-weight: 700;
+	color: var(--primary-dark);
+	line-height: 0px;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 #bagspace-world {
-	border: 1px solid black;
+	border: 2px solid var(--secondary-color);
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border-radius: var(--border-radius-lg);
 	height: 62px;
-	margin-bottom: 5px;
-	margin-top: 13px;
+	margin-bottom: 8px;
+	margin-top: 16px;
 	overflow: hidden;
+	box-shadow: var(--shadow-md);
+	transition: all var(--transition-base);
+}
+
+#bagspace-world:hover {
+	box-shadow: var(--shadow-lg);
+	transform: translateY(-2px);
 }
 
 #bagspace-world > div {
-	padding: 6px 4px;
+	padding: 8px 6px;
 }
 
 #backpackTitle {
 	position: absolute;
 	top: 0px;
 	left: 10px;
-	background-color: white;
+	background: rgba(255, 255, 255, 0.95);
 	z-index: 1;
+	font-weight: 700;
+	color: var(--secondary-color);
+	padding: 0 8px;
 }
 
 #backpackSpace {
 	position: absolute;
 	top: 0px;
 	right: 10px;
-	background-color: white;
+	background: rgba(255, 255, 255, 0.95);
 	z-index: 1;
+	font-weight: 700;
+	color: var(--secondary-color);
+	padding: 0 8px;
 }
 
 #healthCounter {
 	position: absolute;
 	top: 0px;
 	left: 80px;
-	background-color: white;
+	background: rgba(255, 255, 255, 0.95);
 	z-index: 1;
+	font-weight: 700;
+	color: var(--accent-color);
+	padding: 0 8px;
 }
 
 div.supplyItem {
 	display: inline-block;
-	border: 1px solid #999;
+	border: 2px solid var(--primary-color);
+	background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
+	border-radius: var(--border-radius-md);
 	float: left;
-	margin: 0px 5px 6px 0px;
-	padding: 0 5px;
+	margin: 0px 6px 8px 0px;
+	padding: 4px 10px;
 	cursor: default;
+	font-weight: 600;
+	transition: all var(--transition-fast);
+	box-shadow: var(--shadow-sm);
+}
+
+div.supplyItem:hover {
+	transform: translateY(-2px);
+	box-shadow: var(--shadow-md);
+	border-color: var(--secondary-color);
 }

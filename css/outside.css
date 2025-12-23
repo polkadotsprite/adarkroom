@@ -2,17 +2,32 @@ div#village {
 	position: absolute;
 	top: 0px;
 	right: 0px;
-	border: 1px solid black;
+	border: 2px solid var(--accent-color);
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border-radius: var(--border-radius-lg);
 	cursor: default;
-	padding: 5px 10px;
+	padding: 12px 16px;
 	width: 200px;
+	box-shadow: var(--shadow-md);
+	transition: all var(--transition-base);
+}
+
+div#village:hover {
+	box-shadow: var(--shadow-lg);
+	transform: translateY(-2px);
 }
 
 div#population {
 	position: absolute;
 	top: -13px;
 	right: 10px;
-	background-color: white;
+	background: rgba(255, 255, 255, 0.95);
+	font-weight: 700;
+	color: var(--accent-color);
+	padding: 0 8px;
+	font-size: 1.05rem;
 }
 
 .noHuts #population {
@@ -21,14 +36,18 @@ div#population {
 
 div#village:before {
 	position: absolute;
-	background: white;
+	background: rgba(255, 255, 255, 0.95);
 	content: attr(data-legend);
-	left: 8px;
+	left: 12px;
 	top: -13px;
+	font-weight: 700;
+	color: var(--accent-color);
+	padding: 0 8px;
+	font-size: 1.1rem;
 }
 
 div#workers {
-	position:absolute;
+	position: absolute;
 	top: -4px;
 	left: 160px;
 	width: 150px;
@@ -43,12 +62,22 @@ div#workers {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	font-weight: 600;
+	color: var(--primary-dark);
 }
 
 .workerRow {
 	position: relative;
-	margin: 10px 0px;
+	margin: 12px 0px;
 	cursor: default;
+	padding: 6px;
+	border-radius: var(--border-radius-sm);
+	transition: all var(--transition-fast);
+}
+
+.workerRow:hover {
+	background: var(--glass-bg);
+	transform: translateX(2px);
 }
 
 .workerRow .tooltip {
