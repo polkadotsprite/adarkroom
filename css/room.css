@@ -8,18 +8,23 @@ div#buildBtns:before, div#craftBtns:before, div#buyBtns:before {
 	content: attr(data-legend);
 	position: relative;
 	top: -5px;
+	font-weight: 700;
+	font-size: 1.15rem;
+	color: var(--primary-dark);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
 }
 
 div#craftBtns {
 	position: absolute;
 	top: 50px;
-	left: 150px;
+	left: 170px;
 }
 
 div#buyBtns {
 	position: absolute;
 	top: 50px;
-	left: 300px;
+	left: 340px;
 }
 
 div#storesContainer {
@@ -30,31 +35,65 @@ div#storesContainer {
 
 div#stores:before, div#weapons:before {
 	position: absolute;
-	background: white;
+	background: rgba(255, 255, 255, 0.95);
 	content: attr(data-legend);
-	left: 8px;
+	left: 12px;
 	top: -13px;
+	font-weight: 700;
+	color: var(--primary-dark);
+	padding: 0 8px;
+	font-size: 1.1rem;
 }
 
 div#stores {
 	position: relative;
-	z-index:10;
-	border: 1px solid black;
+	z-index: 10;
+	border: 2px solid var(--primary-color);
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border-radius: var(--border-radius-lg);
 	cursor: default;
-	padding: 5px 10px;
+	padding: 12px 16px;
 	width: 200px;
+	box-shadow: var(--shadow-md);
+	transition: all var(--transition-base);
+}
+
+div#stores:hover {
+	box-shadow: var(--shadow-lg);
+	transform: translateY(-2px);
 }
 
 div.storeRow {
 	position: relative;
+	padding: 6px 0;
+	transition: all var(--transition-fast);
+	border-radius: var(--border-radius-sm);
+}
+
+div.storeRow:hover {
+	background: var(--glass-bg);
+	padding-left: 4px;
 }
 
 div#weapons {
-	margin-top: 15px;
+	margin-top: 20px;
 	position: relative;
 	right: 0px;
-	border: 1px solid black;
+	border: 2px solid var(--secondary-color);
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border-radius: var(--border-radius-lg);
 	cursor: default;
-	padding: 5px 10px;
+	padding: 12px 16px;
 	width: 200px;
+	box-shadow: var(--shadow-md);
+	transition: all var(--transition-base);
+}
+
+div#weapons:hover {
+	box-shadow: var(--shadow-lg);
+	transform: translateY(-2px);
 }
