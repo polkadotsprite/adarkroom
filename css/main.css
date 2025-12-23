@@ -246,7 +246,7 @@ span.customSelectOptions {
 }
 
 .menu span:hover {
-	/* Already styled above */
+	/* Hover styles defined in .menu span block above (lines 181-200) */
 }
 
 .menu .appStore {
