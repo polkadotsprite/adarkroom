@@ -79,13 +79,23 @@ Publishing to the Internet (GitHub Pages)
 
 To share your game with the world using GitHub Pages, follow these steps:
 
-1.  **Merge the Pull Request:** Click the green "Merge pull request" button on GitHub.
-2.  **Wait a moment:** GitHub will automatically build your game.
-3.  **Enable Pages (One-time setup):**
-    *   Go to your repository **Settings** (tab at the top).
-    *   Click **Pages** on the left sidebar.
-    *   Under **Build and deployment**, select **Deploy from a branch**.
-    *   Under **Branch**, select `gh-pages` and `/ (root)`.
-    *   Click **Save**.
+### 1. Ensure Repository is Public (Required for Free Accounts)
+GitHub Pages is only free for **Public** repositories.
+*   Go to **Settings** -> **General**.
+*   Scroll to the bottom ("Danger Zone").
+*   If it says "Change repository visibility", ensure it is set to **Public**.
+
+### 2. Merge and Deploy
+1.  **Merge the Pull Request:** Click the green "Merge pull request" button on this page.
+2.  **Wait a minute:** GitHub will create a `gh-pages` branch for you.
+
+### 3. Enable Pages (One-time setup)
+1.  Go to your repository **Settings**.
+2.  Click **Pages** on the left sidebar.
+3.  Look for the **Build and deployment** section (it might be at the top).
+4.  If you don't see it, make sure your repo is **Public**.
+5.  Set **Source** to **Deploy from a branch**.
+6.  Set **Branch** to `gh-pages` and folder to `/ (root)`.
+7.  Click **Save**.
 
 Your game will be live at the link GitHub shows you!
