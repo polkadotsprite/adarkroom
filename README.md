@@ -45,3 +45,31 @@ or play the latest on [GitHub](http://doublespeakgames.github.io/adarkroom)
 <a href="https://itunes.apple.com/us/app/a-dark-room/id736683061"><img src="http://i.imgur.com/DMdnDYq.png" height="50"></a>
 <a href="https://play.google.com/store/apps/details?id=com.yourcompany.adarkroom"><img src="http://i.imgur.com/bLWWj4r.png" height="50"></a>
 <a href="https://store.steampowered.com/app/2460660/A_Dark_Room/"><img src="https://i.imgur.com/yz6cnU0.png" height="50"></a>
+
+Running Locally
+---------------
+
+To run the game locally, you have a few options:
+
+### Using Node.js
+
+1.  Make sure you have [Node.js](https://nodejs.org/) installed.
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+3.  Start the development server:
+    ```bash
+    npm start
+    ```
+4.  Open your browser and navigate to `http://localhost:8080`.
+
+### Using Python
+
+If you have Python 3 installed, you can start a simple HTTP server:
+
+```bash
+python3 -m http.server 8080
+```
+
+Then navigate to `http://localhost:8080`.
