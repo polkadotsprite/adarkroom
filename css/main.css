@@ -266,11 +266,11 @@ div.headerButton {
 	margin-left: 12px;
 	padding-left: 12px;
 	transition: all var(--transition-base);
-	color: var(--primary-dark);
+	color: #94a3b8;
 }
 
 div.headerButton:hover {
-	color: var(--primary-color);
+	color: #e2e8f0;
 	transform: translateY(-2px);
 	text-shadow: 0 2px 4px rgba(99, 102, 241, 0.3);
 }
@@ -283,10 +283,10 @@ div.headerButton:first-child {
 
 div.headerButton.selected, div.headerButton.selected:hover {
 	cursor: default;
-	color: var(--primary-color);
+	color: var(--primary-light);
 	font-weight: 700;
 	text-decoration: underline;
-	text-decoration-color: var(--primary-color);
+	text-decoration-color: var(--primary-light);
 	text-decoration-thickness: 2px;
 	text-underline-offset: 4px;
 }
@@ -324,7 +324,7 @@ div.row_val {
 
 div.total {
 	font-weight: 700;
-	color: var(--primary-dark);
+	color: var(--primary-light);
 	font-size: 1.1em;
 }
 
@@ -374,7 +374,7 @@ div#notifyGradient {
 	background: linear-gradient(
 		to bottom,
 		rgba(15, 23, 42, 0) 0%,
-		rgba(15, 23, 42, 0) 50%,
+		rgba(15, 23, 42, 0) 90%,
 		rgba(15, 23, 42, 1) 100%
 	);
 }
@@ -387,7 +387,8 @@ div.button {
 	border: 2px solid var(--primary-color);
 	background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
 	color: white;
-	width: 120px;
+	width: auto;
+	min-width: 120px;
 	margin-bottom: 8px;
 	padding: 12px 20px;
 	cursor: pointer;
@@ -447,7 +448,7 @@ div.button div.cooldown::after {
 	height: 100%;
 	width: 100%;
 	background: linear-gradient(90deg,
-		rgba(255, 255, 255, 0.4) 0%,
+		rgba(255, 255, 255, 0.15) 0%,
 		rgba(255, 255, 255, 0) 100%
 	);
 	border-radius: var(--border-radius-lg);
@@ -847,7 +848,7 @@ body.noMask .eventTitle:after {
 	min-height: 100px;
 	line-height: 1.7;
 	font-size: 1.05rem;
-	color: #374151;
+	color: #e2e8f0;
 }
 
 #description textarea {
