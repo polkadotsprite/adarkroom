@@ -1,6 +1,6 @@
 /* CSS Custom Properties for Theming */
 :root {
-	--primary-color: #6366f1;
+	--primary-color: #6366f2;
 	--primary-dark: #4f46e5;
 	--primary-light: #818cf8;
 	--secondary-color: #ec4899;
@@ -434,11 +434,118 @@ div.button div.cooldown {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	z-index: -1;
+	z-index: 1;
 	height: 100%;
-	background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+	width: 100%;
+	background: rgba(0, 0, 0, 0.2);
 	border-radius: var(--border-radius-lg);
-	animation: pulse 2s ease-in-out infinite;
+	pointer-events: none;
+}
+
+div.button div.cooldown::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(90deg,
+		rgba(255, 255, 255, 0.4) 0%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	border-radius: var(--border-radius-lg);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+	div#wrapper {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+	div#content {
+		height: auto;
+		min-height: 100vh;
+		padding: 10px;
+		border-radius: 0;
+		border: none;
+		box-shadow: none;
+	}
+
+	div#outerSlider {
+		width: 100%;
+		position: static;
+	}
+
+	div#outerSlider > div {
+		width: 100%;
+		height: auto;
+		float: none;
+	}
+
+	div#locationSlider {
+		position: static;
+		width: 100%;
+		height: auto;
+	}
+
+	div.location {
+		width: 100%;
+		float: none;
+		position: static;
+		height: auto;
+	}
+
+	div#header {
+		height: auto;
+		min-height: 40px;
+		margin-bottom: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+
+	div.headerButton {
+		font-size: 1rem;
+		margin: 5px;
+		padding: 5px;
+		border: 1px solid var(--primary-color);
+		border-radius: var(--border-radius-md);
+		background: rgba(255, 255, 255, 0.5);
+	}
+
+	div#notifications {
+		position: static;
+		width: 100%;
+		height: auto;
+		max-height: 200px;
+		overflow-y: auto;
+		margin-bottom: 20px;
+		background: var(--glass-bg);
+		border-radius: var(--border-radius-md);
+		padding: 10px;
+	}
+
+	div.button {
+		width: 100% !important;
+		margin-bottom: 10px;
+		box-sizing: border-box;
+		font-size: 1.1rem;
+		padding: 15px;
+	}
+
+	div#storesContainer {
+		width: 100%;
+	}
+
+	.logo, .menu {
+		display: none; /* Hide non-essential elements on mobile */
+	}
+
+	#description textarea {
+		height: 150px;
+	}
 }
 
 @keyframes pulse {

@@ -530,7 +530,7 @@ var Room = {
 		// Create the light button
 		new Button.Button({
 			id: 'lightButton',
-			text: _('light fire'),
+			text: _('light fire') + ' 🔥',
 			click: Room.lightFire,
 			cooldown: Room._STOKE_COOLDOWN,
 			width: '80px',
@@ -540,7 +540,7 @@ var Room = {
 		// Create the stoke button
 		new Button.Button({
 			id: 'stokeButton',
-			text: _("stoke fire"),
+			text: _("stoke fire") + ' 🔥',
 			click: Room.stokeFire,
 			cooldown: Room._STOKE_COOLDOWN,
 			width: '80px',
