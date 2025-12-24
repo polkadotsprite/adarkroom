@@ -73,3 +73,19 @@ python3 -m http.server 8080
 ```
 
 Then navigate to `http://localhost:8080`.
+
+Publishing to the Internet (GitHub Pages)
+-----------------------------------------
+
+To share your game with the world using GitHub Pages, follow these steps:
+
+1.  **Merge the Pull Request:** Click the green "Merge pull request" button on GitHub.
+2.  **Wait a moment:** GitHub will automatically build your game.
+3.  **Enable Pages (One-time setup):**
+    *   Go to your repository **Settings** (tab at the top).
+    *   Click **Pages** on the left sidebar.
+    *   Under **Build and deployment**, select **Deploy from a branch**.
+    *   Under **Branch**, select `gh-pages` and `/ (root)`.
+    *   Click **Save**.
+
+Your game will be live at the link GitHub shows you!
