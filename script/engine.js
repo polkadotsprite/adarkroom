@@ -92,9 +92,9 @@
       }
 
       // Check for mobile
-      if(Engine.isMobile()) {
-        window.location = 'mobileWarning.html';
-      }
+      // if(Engine.isMobile()) {
+      //   window.location = 'mobileWarning.html';
+      // }
 
       Engine.disableSelection();
 

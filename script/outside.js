@@ -165,7 +165,7 @@ var Outside = {
 		// Create the gather button
 		new Button.Button({
 			id: 'gatherButton',
-			text: _("gather wood"),
+			text: _("gather wood") + " 🌲",
 			click: Outside.gatherWood,
 			cooldown: Outside._GATHER_DELAY,
 			width: '80px'
@@ -539,7 +539,7 @@ var Outside = {
 			if(btn.length === 0) {
 				new Button.Button({
 					id: 'trapsButton',
-					text: _("check traps"),
+					text: _("check traps") + " 🪤",
 					click: Outside.checkTraps,
 					cooldown: Outside._TRAPS_DELAY,
 					width: '80px'
